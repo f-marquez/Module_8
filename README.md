@@ -14,7 +14,22 @@ This new assignment consists of four technical analysis deliverables. You will s
 
 
 ## Deliverable 1: Write an ETL Function to Read Three Data Files
+- The TV shows are filtered out, and the wiki_movies_df DataFrame is created. 
+- A try-except block is used to catch errors while extracting the IMDb IDs with a regular expression and dropping duplicate IDs.
+- The extraction and transformation of the Wikipedia data in the ETL function does the following:
+  - A list comprehension is used to keep columns with non-null values.
+  - The non-null box office data is converted to string values using the lambda and join functions.
+  - A regular expression is used to match the six elements of "form_one" of the box office data. 
+  - A regular expression is used to match the three elements of "form_two" of the box office data. 
+  - The following columns are cleaned in the Wikipedia DataFrame: 
+    - The box office column
+    - The budget column
+    - The release date column
+    - The running time column
+   - The cleaned Wikipedia data is converted to a Pandas DataFrame, and the DataFrame is displayed in the ETL_clean_wiki_movies.ipynb file.
+
 ## Deliverable 2: Extract and Transform the Wikipedia Data
+
 ## Deliverable 3: Extract and Transform the Kaggle data
 The extraction and transformation of the Kaggle metadata using the ETL function does the following:
   - The Kaggle metadata is cleaned. 
